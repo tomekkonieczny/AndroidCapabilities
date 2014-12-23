@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="necessary.com.androidspikes.ExplodeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:transitionName="@string/pair1"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample1"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:transitionName="@string/pair2"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample4"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:transitionName="@string/pair3"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample2"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:transitionName="@string/pair4"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample3"/>
+
+</LinearLayout>

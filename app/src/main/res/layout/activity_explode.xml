@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="necessary.com.androidspikes.ExplodeActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/holo_blue_light"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:text="EXPLODE"/>
+
+    <ImageView
+        android:id="@+id/first_image"
+        android:transitionName="@string/explode_transition"
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/first_image"
+        android:textSize="25sp"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="88dp"
+        android:paddingBottom="85dp"
+        android:gravity="center"
+        android:background="@android:color/holo_orange_light"
+        android:textStyle="bold"
+        android:text="EXPLODE"/>
+
+    <TextView
+        android:id="@+id/explode_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_image"
+        android:textSize="19sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="EXPLODE TRANSITION EXAMPLE"/>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tomaszkonieczny.myapplication" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="necessary.com.androidspikes.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar">
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="necessary.com.androidspikes.ExplodeActivity"
+            android:label="@string/explode_transition"
+            android:theme="@style/BaseAppTheme" >
+        </activity>
+        <activity
+            android:name="necessary.com.androidspikes.SlideActivity"
+            android:label="@string/slide_transition"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="necessary.com.androidspikes.FadeActivity"
+            android:label="@string/fade_transition"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="necessary.com.androidspikes.PairAcitivty"
+            android:theme="@style/BaseAppTheme"
+            android:label="@string/title_activity_pair_acitivty" >
+        </activity>
+    </application>
+
+</manifest>

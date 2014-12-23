@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android Spikes</string>
+    <string name="slide_transition">MainActivity</string>
+    <string name="fade_transition">fade_transition</string>
+    <string name="explode_transition">explode_transition</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique commodo pellentesque. Integer feugiat neque leo. Integer quis pulvinar felis, finibus condimentum orci. In hac habitasse platea dictumst. Mauris lacus leo, semper non eros a, imperdiet blandit nisi. Nulla facilisi. Vivamus vehicula vestibulum ultrices. Nunc laoreet, sapien nec sodales ullamcorper, leo augue sodales est, eu venenatis arcu erat maximus felis. Sed eu quam porttitor, pulvinar justo id, tempus velit. In rhoncus ut nisl quis dictum. Integer sed eros augue. Pellentesque vel dapibus lectus. Praesent convallis purus in porta ultrices.</string>
+    <string name="title_activity_pair_acitivty">PairAcitivty</string>
+
+    <string name="pair1">pair_1</string>
+    <string name="pair2">pair_2</string>
+    <string name="pair3">pair_3</string>
+    <string name="pair4">pair_4</string>
+
+</resources>
