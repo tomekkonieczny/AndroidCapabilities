@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.StateListAnimator;
 import android.app.Activity;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.transition.Fade;
 import android.view.View;
@@ -28,12 +29,11 @@ public class FadeActivity extends Activity {
 
         setContentView(R.layout.activity_fade);
 
+        // previously invisible view
+        final View myView = findViewById(R.id.reveal_image);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // previously invisible view
-                final View myView = findViewById(R.id.reveal_image);
-
                 if (myView.getVisibility() == View.INVISIBLE) {
                     // get the center for the clipping circle
                     int cx = (myView.getLeft() + myView.getRight()) / 2;
@@ -46,54 +46,48 @@ public class FadeActivity extends Activity {
                     Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
                     anim.setDuration(1500);
 
-                    anim.addListener(new Animator.AnimatorListener() {
-                        @Override
-                        public void onAnimationStart(Animator animation) {
-
-                        }
-
+                    anim.addListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             findViewById(R.id.button2).setVisibility(View.VISIBLE);
-                        }
-
-                        @Override
-                        public void onAnimationCancel(Animator animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(Animator animation) {
-
                         }
                     });
 
                     myView.setVisibility(View.VISIBLE);
                     anim.start();
-                } else {
-                    // get the center for the clipping circle
-                    int cx = (myView.getLeft() + myView.getRight()) / 2;
-                    int cy = (myView.getTop() + myView.getBottom()) / 2;
-
-                    // get the initial radius for the clipping circle
-                    int initialRadius = myView.getWidth();
-
-                    // create the animation (the final radius is zero)
-                    Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-                    anim.setDuration(1500);
-
-                    // make the view invisible when the animation is done
-                    anim.addListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            super.onAnimationEnd(animation);
-                            myView.setVisibility(View.INVISIBLE);
-                        }
-                    });
-
-                    // start the animation
-                    anim.start();
                 }
+            }
+        });
+
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // get the center for the clipping circle
+                int cx = (myView.getLeft() + myView.getRight()) / 2;
+                int cy = (myView.getTop() + myView.getBottom()) / 2;
+
+                // get the initial radius for the clipping circle
+                int initialRadius = myView.getWidth();
+
+                // create the animation (the final radius is zero)
+                Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
+                anim.setDuration(1500);
+
+                // make the view invisible when the animation is done
+                anim.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        myView.setVisibility(View.INVISIBLE);
+                        View view = findViewById(R.id.vector_sample);
+                        view.setVisibility(View.VISIBLE);
+                        AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) view.getBackground();
+                        animatedVectorDrawable.start();
+                    }
+                });
+
+                // start the animation
+                anim.start();
             }
         });
     }

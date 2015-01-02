@@ -91,7 +91,7 @@ public class MainActivity extends FragmentActivity {
         findViewById(R.id.fourth_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PairAcitivty.class);
+                Intent intent = new Intent(MainActivity.this, PairActivity.class);
 
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
                         MainActivity.this,
